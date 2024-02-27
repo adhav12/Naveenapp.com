@@ -6,7 +6,10 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 
-public class ExtendLisdners implements ITestListener{
+import pomtest.BaseTest;
+
+
+public class ExtendLisdners extends BaseTest implements ITestListener{
 	ExtentReports extend =  ExtendreportGen.extendreportGenerator();
 
 	@Override

@@ -1,11 +1,8 @@
 package pompages;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Dashboardpage {
@@ -21,15 +18,13 @@ public class Dashboardpage {
 		public boolean navToDashboard() {
 			String dashboardurl = driver.getCurrentUrl();
 			System.out.println("Dashboard page URL:"+dashboardurl);
-		     boolean ispresent = dashboardurl.contains("dashboard")	;
+		     boolean ispresent = dashboardurl.contains("dashboardurl")	;
 		     return ispresent;
 			
 			
 		}
-		public void clickonMytimesheets() {
-			Mytimesheet.click();
-			// TODO Auto-generated method stub
-			
+		public void clickontimesheets() {
+          Mytimesheet.click();			
 		}
 		
 		

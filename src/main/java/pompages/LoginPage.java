@@ -7,13 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.testng.annotations.BeforeClass;
-
-import io.reactivex.rxjava3.observers.BaseTestConsumer;
 
 public class LoginPage extends BaseClass{
-	WebDriver driver;
-
+WebDriver driver;
 	
 	@FindBy(xpath ="//input[@name='username']")
 	private WebElement username;
@@ -24,17 +20,15 @@ public class LoginPage extends BaseClass{
 	@FindBy(xpath ="//button[@type='submit']")
 	private WebElement loginbutton;
 	
-	public LoginPage(WebDriver driver) throws IOException {
+	public LoginPage(WebDriver driver) throws IOException{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	@BeforeClass
-	public void loginToApp() throws InterruptedException {
+	public void loginToApp() {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		username.sendKeys("Admin");
 		password.sendKeys("admin123");
 		loginbutton.click();
-		Thread.sleep(3000);
 
 	
 		

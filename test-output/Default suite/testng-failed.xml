@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="pomtest.DashboardTest">
+      <class name="adminTest.UserManagmentTest">
         <methods>
           <include name="initBrowser"/>
-          <include name="clickonMytimesheetsButton"/>
-          <include name="verifyDashboardpage"/>
-          <include name="createobject"/>
+          <include name="verifyUserPage"/>
+          <include name="createObject"/>
         </methods>
-      </class> <!-- pomtest.DashboardTest -->
+      </class> <!-- adminTest.UserManagmentTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
